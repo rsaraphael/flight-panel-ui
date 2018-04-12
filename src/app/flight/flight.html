@@ -1,1 +1,36 @@
-{{flg.teste}}
+<div class="main-container">
+  <header class="header">
+    <p class="header-title">
+      <a href="/flight">
+        Flight Panel
+      </a>
+    </p>
+  </header>
+
+
+  <main class="main">
+    <div class="title">
+      <h1 class="title-h1">Flight Panel app</h1>
+      <div>
+        <label>Pilot</label>
+        <input type="text" ng-model='search.pilotName' />
+        <label>Aircraft</label>
+        <input type="text" ng-model='search.aircraftName' />
+        <label>State</label>
+        <input type="text" ng-model='search.state' />
+      </div>
+    </div>
+
+    <div class="techs-container">
+      <div class="techs">
+        <flight-itinerary-panel ng-repeat="flight in flg.teste | filter:search" flight=flight></flight-itinerary-panel>
+      </div>
+    </div>
+
+  </main>
+
+
+  <footer class="footer">
+    Flight Panel
+  </footer>
+</div>

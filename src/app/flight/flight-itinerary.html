@@ -1,0 +1,18 @@
+<div class="tech">
+    <img class="tech-logo" src="assets/logo.png" />
+    <h2 class="tech-h2">
+        {{ vm.flight.aircraftName }}
+    </h2>
+    <h3>
+        <label>Pilot:</label>
+        <span>{{ vm.flight.pilotName}} </span>
+    </h3>
+    <hr>
+    <div class="font10" ng-repeat="itinerary in vm.flight.itineraries">
+        <label>{{ itinerary.type }}:</label>
+        <span>{{ itinerary.time }}</span>
+        <p> {{ itinerary.city }}</p>
+    </div>
+    <hr>
+    <span class='status'>{{ vm.flight.state}} </span>
+</div>
