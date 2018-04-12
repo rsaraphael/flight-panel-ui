@@ -1,5 +1,5 @@
 angular
-  .module('flight-ui')
+  .module('app')
   .config(routesConfig);
 
 /** @ngInject */

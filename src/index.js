@@ -1,2 +1,2 @@
 angular
-  .module('flight-ui', ['ui.router']);
+  .module('app', ['ui.router']);
