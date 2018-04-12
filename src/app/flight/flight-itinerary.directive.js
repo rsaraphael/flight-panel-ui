@@ -1,12 +1,12 @@
 angular
-    .module("flight-ui")
+    .module("app")
     .directive("flightItineraryPanel", flightItineraryDirective);
 
 
 function flightItineraryDirective() {
     const directive = {
         templateUrl: 'app/flight/flight-itinerary.html',
-        scope:{
+        scope: {
             flight: '='
         },
         controller: flightItineraryController,
@@ -18,6 +18,6 @@ function flightItineraryDirective() {
 }
 
 function flightItineraryController($scope) {
-     const vm = this;
-     console.log(vm.flight);
+    const vm = this;
+    console.log(vm.flight);
 }

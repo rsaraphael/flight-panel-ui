@@ -1,10 +1,10 @@
-angular.module('flight-ui').service('FlightService', FlightService);
+angular.module('app').service('FlightService', FlightService);
 
 /** @ngInject */
 function FlightService($http) {
     return {
      getFlights() {
-       return $http.get('http://localhost:8080/flights');
+       return $http.get('https://flight-panel-api.herokuapp.com/flight');
     }
   };
 }
