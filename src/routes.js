@@ -13,5 +13,11 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       templateUrl: 'app/flight/flight.html',
       controller: 'FlightController',
       controllerAs: 'flg'
-    });
+    })
+    .state('flight-info', {
+      url: '/:flightNumber',
+      templateUrl: 'app/flight/flight-info.html',
+      controller: 'FlightInfoController',
+      controllerAs: 'flgInfo'
+    });;
 }

@@ -1,0 +1,33 @@
+<div class="main-container">
+    <header class="header">
+        <p class="header-title">
+            <a class="up-link" href="/flight">
+                Fly Airlines
+            </a>
+        </p>
+    </header>
+
+    <main class="main">
+        <div class="title">
+            <h1 class="title-h1">Flight Panel app</h1>
+            <div>
+            </div>
+        </div>
+
+        <div class="info-container">
+            <div class="tech info">
+                <p ng-repeat="itinerary in flgInfo.itineraries">
+                    {{itinerary.arriveTime}}
+                    {{itinerary.departTime}}
+                    {{itinerary.arriveTime}}
+                    {{itinerary.pilotName}}
+                    {{itinerary.aircraftName}}
+                    {{itinerary.origin}}
+                    {{itinerary.destination}}
+                    {{itinerary.status}}
+                </p>
+            </div>
+        </div>
+
+    </main>
+</div>
