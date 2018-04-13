@@ -4,7 +4,10 @@ angular.module('app').service('FlightService', FlightService);
 function FlightService($http) {
     return {
      getFlights() {
-       return $http.get('https://flight-panel-api.herokuapp.com/flight');
-    }
+       return $http.get('http://localhost:8080/flight');
+    },
+    getFlightInfo(id) {
+      return $http.get('http://localhost:8080/flight/' + id);
+   }
   };
 }

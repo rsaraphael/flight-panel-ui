@@ -8,7 +8,7 @@ body, h1, h2, h3 {
   font-weight: 300
 }
 
-a {
+.up-link{
   color: white;
   text-decoration: none;
 }
@@ -80,6 +80,8 @@ a:hover {
 
 .techs-container {
   margin: 1rem;
+  margin-left: 4em;
+  margin-right: 4em;
 }
 .techs-h2 {
   font-weight: 300;
@@ -89,17 +91,26 @@ a:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  cursor: pointer;
 }
 
 .tech {
-  height: 17rem;
-  width: 21rem;
+  height: 5rem;
+  width: 10rem;
   border: 1px solid lightgray;
   border-radius: 1rem;
   margin: 1rem;
   padding: 1rem;
+  display: block;
+  text-decoration: none;
 }
+
+.info {
+  height: 50rem;
+  width: 50rem;
+}
+
 .tech-logo {
   width: 5rem;
   height: 5rem;
@@ -127,4 +138,11 @@ input[type=text], select {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+}
+
+.info-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1em;
 }
