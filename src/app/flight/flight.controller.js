@@ -2,7 +2,8 @@ angular
   .module("app")
   .controller("FlightController", FlightController);
 
-function FlightController(FlightService) {
+function FlightController(FlightService, $rootScope) {
   const vm = this;
-  FlightService.getFlights().then(response => vm.teste = response.data);
+  $rootScope.loadPromise = FlightService.getFlights();
+  $rootScope.loadPromise.then(response => vm.flightNumbers = response.data);
 }
