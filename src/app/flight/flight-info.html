@@ -1,33 +1,54 @@
-<div class="main-container">
-    <header class="header">
-        <p class="header-title">
-            <a class="up-link" href="/flight">
-                Fly Airlines
-            </a>
-        </p>
-    </header>
+<main class="main">
+    <div class="title">
+        <h1 class="title-h1">Flight Panel app</h1>
+        <div class="mini-title">
+            <label>Flight Number</label>
+            <span>{{flgInfo.flightInfo.flightNumber}}</span>
+        </div>
+    </div>
 
-    <main class="main">
-        <div class="title">
-            <h1 class="title-h1">Flight Panel app</h1>
-            <div>
+    <div class="info-container">
+        <div class="flight info" ng-repeat="itinerary in flgInfo.itineraries">
+            <div class="flex-center">
+                <span class="status">{{itinerary.status}}</span>
+            </div>
+            <hr/>
+            <div class="flex-center">
+                <div class="flex-row">
+                    <span class="mright2">
+                        <label>Origin:</label>
+                        <span>{{itinerary.origin}}</span>
+                    </span>
+                    <span>
+                        <label>Destination:</label>
+                        <span>{{itinerary.destination}}</span>
+                    </span>
+                </div>
+            </div>
+            <hr/>
+
+            <div class="flex-center padding02">
+                <div class="flex-center">
+                    <div class="padding02">
+                        <label>Depart:</label>
+                        <span>{{itinerary.departTime}}</span>
+                    </div>
+                    <div class="padding02">
+                        <label>Arrive:</label>
+                        <span>{{itinerary.arriveTime}}</span>
+                    </div>
+                    <div class="padding02">
+                        <label>Pilot:</label>
+                        <span>{{itinerary.pilotName}}</span>
+                    </div>
+                    <div class="padding02">
+                        <label>Aircraft:</label>
+                        <span>{{itinerary.aircraftName}}</span>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="info-container">
-            <div class="tech info">
-                <p ng-repeat="itinerary in flgInfo.itineraries">
-                    {{itinerary.arriveTime}}
-                    {{itinerary.departTime}}
-                    {{itinerary.arriveTime}}
-                    {{itinerary.pilotName}}
-                    {{itinerary.aircraftName}}
-                    {{itinerary.origin}}
-                    {{itinerary.destination}}
-                    {{itinerary.status}}
-                </p>
-            </div>
-        </div>
-
-    </main>
+</main>
 </div>
