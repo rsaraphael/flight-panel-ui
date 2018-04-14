@@ -1,26 +1,17 @@
-<div class="main-container">
-  <header class="header">
-    <p class="header-title">
-      <a class="up-link" href="/flight">
-        Fly Airlines
-      </a>
-    </p>
-  </header>
-
-  <main class="main">
-    <div class="title">
-      <h1 class="title-h1">Flight Panel app</h1>
-      <div>
-        <label>Flight Number</label>
-        <input type="text" ng-model='search'/>
-      </div>
+<main class="main">
+  <div class="title">
+    <h1 class="title-h1">Flight Panel app</h1>
+    <div>
+      <label>Flight Number</label>
+      <input type="text" ng-model='search' />
     </div>
+  </div>
 
-    <div class="techs-container">
-      <div class="techs">
-        <flight-itinerary-panel ng-repeat="flight in flg.teste | filter:search" flight=flight></flight-itinerary-panel>
-      </div>
+  <div class="flights-container">
+    <div class="flights">
+      <flight-itinerary-panel ng-repeat="flight in flg.teste | filter:search" flight=flight></flight-itinerary-panel>
     </div>
+  </div>
 
-  </main>
+</main>
 </div>
