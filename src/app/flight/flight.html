@@ -1,6 +1,6 @@
 <main class="main">
   <div class="title">
-    <h1 class="title-h1">Flight Panel app</h1>
+    <h1 class="title-h1">Flight Panel</h1>
     <div>
       <label>Flight Number</label>
       <input type="text" ng-model='search' />
@@ -9,7 +9,7 @@
 
   <div class="flights-container">
     <div class="flights">
-      <flight-itinerary-panel ng-repeat="flight in flg.teste | filter:search" flight=flight></flight-itinerary-panel>
+      <flight-number-panel ng-repeat="flight in flg.flightNumbers | filter:search" flight=flight></flight-number-panel>
     </div>
   </div>
 
