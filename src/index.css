@@ -91,7 +91,7 @@ a:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   cursor: pointer;
 }
 
@@ -170,14 +170,18 @@ input[type=text], select {
   font-size: 2em;
 }
 
-background-green{
-  
+button {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-background-blue{
-  
-}
-
-background-yellow{
-  
+.mtop08{
+  margin-top: 0.8em;
 }

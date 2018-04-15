@@ -19,5 +19,5 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       templateUrl: 'app/flight/flight-info.html',
       controller: 'FlightInfoController',
       controllerAs: 'flgInfo'
-    });;
+    });
 }
