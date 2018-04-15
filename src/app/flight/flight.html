@@ -1,10 +1,23 @@
 <main class="main">
   <div class="title">
     <h1 class="title-h1">Flight Panel</h1>
-    <div>
+    <div ng-show="!flg.showFilters">
       <label>Flight Number</label>
       <input type="text" ng-model='search' />
     </div>
+    <button ng-show="!flg.showFilters" class="flex-row" ng-click='flg.enableAdvancedSearchFilter(true)'>Advanced search</button>
+   
+    <div ng-show="flg.showFilters" class="flex-row">
+      <label class="mtop08">City of Origin:</label>
+      <input type="text" ng-model='flg.origin' />
+      <label class="mtop08">City of Destination:</label>
+      <input type="text" ng-model='flg.destination' />
+      <label class="mtop08">Pilot name:</label>
+      <input type="text" ng-model='flg.pilotName' />
+      <label class="mtop08">Aircraft model:</label>
+      <input type="text" ng-model='flg.aircraftModel' />
+    </div>
+    <button ng-show="flg.showFilters" class="flex-row" ng-click='flg.advancedSearch()'>Search</button>
   </div>
 
   <div class="flights-container">
